@@ -15,10 +15,9 @@ public abstract class Person {
     }
 
     public String erzeugenZeile() {
-
-        String message = String.format(Locale.GERMANY,
-            "%S \r\n    %s \r\n    %s \r\n    %,9.2f \r\n    %s\r\n",
-            this.getTyp(), this.vorname, this.name, this.gehalt, this.erzeugenDtail() 
+        String message = String.format(Locale.US,
+            "%-15s%-15s%-15s%-15.1f%-15s\r\n",
+            this.getTyp(), this.vorname, this.name, this.ermittelnGehalt(), this.erzeugenDetail() 
         );
         
         return message;

@@ -2,10 +2,10 @@ public class Spieler extends Person {
     private String position;
     private double monatsgehalt = 180000;
     private double spielpraemie = 5000;
-    private double spieleinzaetze;
+    private int spieleinzaetze;
     
 
-    public Spieler(String name, String vorname, String position, double spieleinzaetze)
+    public Spieler(String name, String vorname, String position, int spieleinzaetze)
     {
         super(name, vorname);
         this. position = position;
@@ -24,7 +24,7 @@ public class Spieler extends Person {
 
     
     public String erzeugenDetail() {
-        return "Position: " + this.position + "/ " + "Spieleinsätze: " + this.spieleinzaetze ;
+        return "Position: " + this.position + "/" + "Spieleinsätze: " + this.spieleinzaetze ;
     }
 
 }

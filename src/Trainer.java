@@ -6,12 +6,13 @@ public class Trainer extends Person {
 
 
     public Trainer(String vorname, String name, Spieler liebster) {
+        super(name, vorname);
         this.liebster = liebster;
         this.name = name;
         this.vorname = vorname;
     }
 
-    public double ermittelnGehalt (double monatsgehalt) {
+    public double ermittelnGehalt () {
         return monatsgehalt * 12;
     }
 
@@ -20,6 +21,6 @@ public class Trainer extends Person {
     }
 
     public String erzeugenDetail() {
-        return "Lieblingspieler: " + this.liebster.name ;
+        return "Lieblingspieler: " + this.liebster.getName() ;
     }
 }

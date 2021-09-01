@@ -1,4 +1,4 @@
-public class Arzt {
+public class Arzt extends Person {
     String fach;
     double monatsgehalt = 10000;
     String name;
@@ -6,8 +6,7 @@ public class Arzt {
 
 
     public Arzt(String vorname, String name, String fach) {
-        this.name = name;
-        this.vorname = vorname;
+        super(name, vorname);
         this.fach = fach;
     }
 
